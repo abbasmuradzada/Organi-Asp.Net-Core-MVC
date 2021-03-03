@@ -1,0 +1,342 @@
+﻿@inject AppInfoRepository appInfo
+
+@{
+    var info = @appInfo.GetInfo();
+}
+
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template - @ViewBag.Title</title>
+
+    <base href="~/" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+</head>
+<body>
+
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div class="humberger-menu-overlay"></div>
+    <div class="humberger-menu-wrapper">
+        <div class="humberger-menu-logo">
+            <a href="#"><img src="assets/img/logo.png" alt=""></a>
+        </div>
+        <div class="humberger-menu-cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header-cart-price">item: <span>$150.00</span></div>
+        </div>
+        <div class="humberger-menu-widget">
+            <div class="header-top-right-language">
+                <img src="assets/img/language.png" alt="">
+                <div>English</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header-top-right-auth">
+                <a href="#"><i class="fa fa-user"></i> Login</a>
+            </div>
+        </div>
+        <nav class="humberger-menu-nav mobile-menu">
+            <ul>
+                <li class="active"><a asp-controller="home" asp-action="index">Home</a></li>
+                <li><a asp-controller="shop" asp-action="index">Shop</a></li>
+                <li>
+                    <a href="#">Pages</a>
+                    <ul class="header-menu-dropdown">
+                        <li><a href="shop-details.html">Shop Details</a></li>
+                        <li><a href="shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="checkout.html">Check Out</a></li>
+                        <li><a href="blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li><a asp-action="index" asp-controller="Blog">Blog</a></li>
+                <li><a asp-action="Contact" asp-controller="home">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header-top-right-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger-menu-contact">
+            <ul>
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:@info.Email">
+                        @info.Email
+                    </a>
+                </li>
+                <li>@info.HashTag</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header-top-left">
+                            <ul>
+                                <li>
+                                    <i class="fa fa-envelope"></i>
+                                    <a href="mailto:@info.Email">
+                                        @info.Email
+                                    </a>
+                                </li>
+                                <li>@info.HashTag</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header-top-right">
+                            <div class="header-top-right-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header-top-right-language">
+                                <img src="assets/img/language.png" alt="">
+                                <div>English</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">Spanis</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-top-right-auth">
+                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header-logo">
+                        <a href="index-2.html"><img src="assets/img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header-menu">
+                        <ul>
+                            <li class="active">
+                                <a asp-controller="home" asp-action="index">Home</a>
+                            </li>
+                            <li><a asp-controller="shop" asp-action="index">Shop</a></li>
+                            <li>
+                                <a href="#">Pages</a>
+                                <ul class="header-menu-dropdown">
+                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                    <li><a href="shoping-cart.html">Shoping Cart</a></li>
+                                    <li><a href="checkout.html">Check Out</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a asp-action="index" asp-controller="Blog">Blog</a></li>
+                            <li><a asp-action="Contact" asp-controller="home">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header-cart">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        </ul>
+                        <div class="header-cart-price">item: <span>$150.00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero-categories">
+                        <div class="hero-categories-all">
+                            <i class="fa fa-bars"></i>
+                            <span>All departments</span>
+                        </div>
+                        @await Component.InvokeAsync("Categories")
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero-search">
+                        <div class="hero-search-form">
+                            <form action="#">
+                                <div class="hero-search-categories">
+                                    All Categories
+                                    <span class="arrow_carrot-down"></span>
+                                </div>
+                                <input type="text" placeholder="What do yo u need?">
+                                <button type="submit" class="site-btn">SEARCH</button>
+                            </form>
+                        </div>
+                        <div class="hero-search-phone">
+                            <div class="hero-search-phone-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero-search-phone-text">
+                                <h5>@info.PhoneNumber</h5>
+                                <span>support 24/7 time</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-item set-bg" data-setbg="assets/img/hero/banner.jpg">
+                        <div class="hero-text">
+                            <span>FRUIT FRESH</span>
+                            <h2>Vegetable <br />100% Organic</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="#" class="primary-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @RenderBody()
+
+
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-about">
+                        <div class="footer-about-logo">
+                            <a href="index-2.html"><img src="assets/img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address: @info.Address</li>
+                            <li>Phone: @info.PhoneNumber</li>
+                            <li>
+                                Email:
+                                <a href="mailto:@info.Email">
+                                    @info.Email
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer-widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">About Our Shop</a></li>
+                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">Delivery infomation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Sitemap</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a asp-action="Contact" asp-controller="home">Contact</a></li>
+                            <li><a href="#">Innovation</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer-widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footer-widget-social">
+                            @if (!string.IsNullOrWhiteSpace(info.FacebookLink))
+                            {
+                                <a href="@info.FacebookLink" target="_blank"><i class="fa fa-facebook"></i></a>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(info.InstagramLink))
+                            {
+                                <a href="@info.InstagramLink" target="_blank"><i class="fa fa-instagram"></i></a>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(info.TwitterLink))
+                            {
+                                <a href="@info.TwitterLink" target="_blank">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(info.PinterestLink))
+                            {
+                                <a href="@info.PinterestLink" target="_blank">
+                                    <i class="fa fa-pinterest"></i>
+                                </a>
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copyright">
+                        <div class="footer-copyright-text">
+                            <p>
+                                Copyright &copy; @DateTime.Now.Year All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+                            </p>
+                        </div>
+                        <div class="footer-copyright-payment"><img src="assets/img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.nice-select.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+    <script src="assets/js/mixitup.min.js" type="text/javascript"></script>
+    <script src="assets/js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+
+
+</body>
+</html>

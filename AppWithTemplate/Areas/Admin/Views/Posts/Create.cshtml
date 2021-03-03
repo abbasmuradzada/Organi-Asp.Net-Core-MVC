@@ -1,0 +1,54 @@
+﻿@model AppWithTemplate.Models.Entity.Post
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="col-md-12">
+    <div class="grid simple">
+        <div class="grid-title no-border">
+            <h4>Simple <span class="semi-bold">Elemets</span></h4>
+            <div class="tools">
+                <a href="javascript:;" class="collapse"></a>
+                <a href="#grid-config" data-toggle="modal" class="config"></a>
+                <a href="javascript:;" class="reload"></a>
+                <a href="javascript:;" class="remove"></a>
+            </div>
+        </div>
+        <div class="grid-body no-border">
+            <br>
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <form enctype="multipart/form-data" method="post" asp-action="Create">
+                        <div class="form-group">
+                            <label asp-for="Title" class="control-label"></label>
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                            <div class="controls">
+                                <input asp-for="Title" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Body" class="control-label"></label>
+                            <span asp-validation-for="Body" class="text-danger"></span>
+                            <div class="controls">
+                                <input asp-for="Body" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Image"  class="control-label"></label>
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                            <div class="controls">
+                                <input asp-for="Image" name="myFile" accept="image/*" type="file" class="form-control">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Create</button>
+                        <a class="btn btn-info" asp-action="Index">Back to List</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

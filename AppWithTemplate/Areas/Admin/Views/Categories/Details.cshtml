@@ -1,0 +1,42 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<ul class="breadcrumb">
+    <li>
+        <p>Ana səhifə</p>
+    </li>
+    <li>
+        <p>Kateqoriyalar</p>
+    </li>
+    <li>
+        <a href="#" class="active">Baxış</a>
+    </li>
+</ul>
+<div class="page-title">
+    <i class="icon-custom-left"></i>
+    <a asp-action="Index">
+        <h3>Kateqoriyalar</h3>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="grid simple">
+            <div class="grid-body no-border">
+                <div class="form">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" disabled class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <a asp-action="Index" class="btn btn-info">Geri</a>
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

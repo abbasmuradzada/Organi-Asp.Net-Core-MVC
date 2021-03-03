@@ -1,0 +1,45 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+    <ul class="breadcrumb">
+        <li>
+            <p>Ana səhifə</p>
+        </li>
+        <li>
+            <p>Kateqoriyalar</p>
+        </li>
+        <li>
+            <a href="#" class="active">Redaktə</a>
+        </li>
+    </ul>
+<div class="page-title">
+    <i class="icon-custom-left"></i>
+    <a asp-action="Index">
+        <h3>Kateqoriyalar</h3>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="grid simple">
+            <div class="grid-body no-border">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <a asp-action="Index" class="btn btn-info">Back to List</a>
+                        <input type="submit" value="Save" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
